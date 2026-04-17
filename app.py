@@ -49,10 +49,98 @@ def inject_styles() -> None:
             letter-spacing: -0.03em;
             color: #183530;
         }
+
+        /* --- Sidebar --- */
+        section[data-testid="stSidebar"] {
+            background: linear-gradient(180deg, #f5f0e6 0%, #ede7dc 100%);
+            border-right: 1px solid rgba(24, 53, 48, 0.10);
+        }
+        section[data-testid="stSidebar"] * {
+            color: #1d2b28 !important;
+        }
+        section[data-testid="stSidebar"] .stMetric label,
+        section[data-testid="stSidebar"] .stMetric [data-testid="stMetricValue"] {
+            color: #183530 !important;
+        }
+        section[data-testid="stSidebar"] .stSelectbox label,
+        section[data-testid="stSidebar"] .stTextInput label,
+        section[data-testid="stSidebar"] .stSlider label,
+        section[data-testid="stSidebar"] .stMultiSelect label,
+        section[data-testid="stSidebar"] .stFileUploader label {
+            color: #384844 !important;
+            font-weight: 500;
+        }
+        section[data-testid="stSidebar"] h1,
+        section[data-testid="stSidebar"] h2,
+        section[data-testid="stSidebar"] h3 {
+            color: #183530 !important;
+        }
+
+        /* --- Tabs --- */
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 0.5rem;
+            background: transparent;
+        }
+        .stTabs [data-baseweb="tab"] {
+            background: rgba(255, 252, 247, 0.7);
+            border: 1px solid rgba(24, 53, 48, 0.12);
+            border-radius: 10px 10px 0 0;
+            padding: 0.5rem 1.2rem;
+            color: #384844 !important;
+            font-weight: 500;
+            font-size: 0.92rem;
+        }
+        .stTabs [data-baseweb="tab"][aria-selected="true"] {
+            background: #ffffff;
+            color: #183530 !important;
+            font-weight: 600;
+            border-bottom: 2px solid #2c7a69;
+        }
+        .stTabs [data-baseweb="tab"]:hover {
+            background: rgba(255, 255, 255, 0.85);
+            color: #183530 !important;
+        }
+        .stTabs [data-baseweb="tab-panel"] {
+            padding-top: 1rem;
+        }
+
+        /* --- Buttons --- */
+        .stButton > button {
+            background: #2c7a69 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 999px;
+            font-weight: 500;
+            padding: 0.45rem 1rem;
+            transition: background 0.2s;
+        }
+        .stButton > button:hover {
+            background: #1a5c4e !important;
+            color: #ffffff !important;
+        }
+        .stButton > button:active {
+            background: #14493d !important;
+            color: #ffffff !important;
+        }
+
+        /* --- Quick prompt buttons (same style) --- */
+        .quick-prompt button {
+            border-radius: 999px;
+        }
+
+        /* --- Info / Success / Warning / Error alerts --- */
+        .stAlert {
+            border-radius: 12px;
+        }
+        [data-testid="stAlert"] {
+            color: #1d2b28 !important;
+        }
+
+        /* --- Cards --- */
         .hero-card,
         .panel-card,
         .login-card {
-            background: rgba(255, 252, 247, 0.82);
+            background: rgba(255, 252, 247, 0.92);
             border: 1px solid rgba(24, 53, 48, 0.12);
             border-radius: 22px;
             box-shadow: 0 18px 45px rgba(64, 52, 37, 0.08);
@@ -77,6 +165,7 @@ def inject_styles() -> None:
             font-size: 2.35rem;
             line-height: 1;
             margin-bottom: 0.55rem;
+            color: #183530;
         }
         .hero-copy {
             color: #384844;
@@ -104,13 +193,29 @@ def inject_styles() -> None:
             font-size: 0.78rem;
             border: 1px solid rgba(24, 67, 59, 0.12);
         }
+
+        /* --- Chat messages --- */
         .stChatMessage {
             background: rgba(255, 252, 247, 0.88);
             border: 1px solid rgba(24, 53, 48, 0.08);
             border-radius: 18px;
         }
-        .quick-prompt button {
-            border-radius: 999px;
+
+        /* --- Chat input --- */
+        .stChatInput textarea {
+            color: #1d2b28 !important;
+            background: #ffffff !important;
+        }
+
+        /* --- Expanders --- */
+        .streamlit-expanderHeader {
+            color: #183530 !important;
+            font-weight: 500;
+        }
+
+        /* --- Subheaders --- */
+        [data-testid="stSubheader"] {
+            color: #183530 !important;
         }
         </style>
         """,
