@@ -13,6 +13,44 @@ This repository now goes beyond a basic upload-and-chat demo. It implements a pr
 - inline evidence citations
 - optional local authentication
 
+## Screenshots
+
+### Chat — Ask questions with inline citations
+
+Upload documents, ask grounded questions, and get streamed answers with source citations. The retrieved context panel shows exactly which chunks were used and their relevance scores.
+
+![Chat interface with citations](docs/screenshots/chat.png)
+
+### Library — Manage sources and learned notes
+
+Browse all ingested documents and saved wiki notes. Upload new files or remove outdated sources without leaving the app.
+
+![Library view](docs/screenshots/library.png)
+
+### Wiki — Compiled knowledge base
+
+Explore auto-generated source summaries, the workspace index, activity log, and any answers you saved back into the wiki.
+
+![Wiki tab](docs/screenshots/wiki.png)
+
+### Knowledge Graph — Entity relationships across documents
+
+Visualize entities (people, teams, tools, policies, concepts) and their relationships extracted from your entire corpus. Click nodes to explore connections.
+
+![Knowledge graph visualization](docs/screenshots/knowledge-graph.png)
+
+### Save to Wiki — Compounding knowledge loop
+
+Save a useful answer as a learned note. It gets re-ingested into retrieval so the system gets smarter over time.
+
+![Save answer to wiki](docs/screenshots/save-to-wiki.png)
+
+### Workspace Isolation — Separate knowledge spaces
+
+Each workspace maintains its own documents, conversations, wiki artifacts, and knowledge graph — fully isolated from other workspaces.
+
+![Workspace selection](docs/screenshots/workspace.png)
+
 ## Primary Use Case
 
 The main use case this app is built around is a team handbook or internal wiki assistant:
@@ -170,6 +208,7 @@ llm-wiki/
 │   ├── test_rag_pipeline.py
 │   └── test_utils.py
 └── docs/
+    ├── screenshots/          # App screenshots for README
     ├── INSPIRATION.md
     ├── OPERATIONS.md
     └── SAMPLE_QUESTIONS.md
