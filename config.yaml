@@ -1,0 +1,45 @@
+ollama:
+  base_url: "http://localhost:11434"
+  chat_model: "llama3:latest"
+  temperature: 0.1
+  timeout_seconds: 120
+
+embeddings:
+  provider: "ollama"
+  model: "llama3:latest"
+
+chunking:
+  chunk_size: 900
+  chunk_overlap: 150
+
+retrieval:
+  top_k: 4
+
+workspaces:
+  defaults:
+    - "General"
+    - "Team Handbook"
+    - "Research Lab"
+
+security:
+  enabled: false
+  users:
+    - username: "admin"
+      display_name: "Workspace Admin"
+      role: "owner"
+      password_sha256: "240be518fabd2724ddb6f04eeb4e35cdd1f4a4e3c4cc1422dd3fd5f5f24b5c2f"
+      workspaces:
+        - "General"
+        - "Team Handbook"
+        - "Research Lab"
+
+paths:
+  workspace_root: "data/workspaces"
+  sample_docs_dir: "sample_docs"
+
+prompts:
+  system_prompt: |
+    You are a careful wiki assistant working over a local compiled knowledge base.
+    Answer with concise, helpful language and cite evidence inline using the citation labels exactly as provided, for example [company_wiki.txt#chunk-0].
+    Prefer grounded answers over speculation.
+    If the answer is not supported by the retrieved context, say that directly.

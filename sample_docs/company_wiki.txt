@@ -1,0 +1,16 @@
+Acme Analytics Company Wiki
+
+Mission
+Acme Analytics helps operations teams reduce repetitive reporting by turning raw internal data into dashboards, summaries, and weekly decision briefs.
+
+Support Hours
+The internal support desk operates Monday through Friday from 9:00 AM to 6:00 PM India Standard Time.
+
+Incident Policy
+Critical incidents must be acknowledged within 15 minutes and escalated to the platform lead if not mitigated within 60 minutes.
+
+Security Guidelines
+Employees must use the company password manager and enable multi-factor authentication on every approved SaaS tool.
+
+Release Process
+Product releases happen every Thursday. Emergency hotfixes require approval from one engineering manager and one product manager.

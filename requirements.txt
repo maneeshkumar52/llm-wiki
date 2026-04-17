@@ -1,0 +1,7 @@
+chromadb==0.5.5
+pyvis==0.3.2
+pypdf==4.3.1
+pytest==8.3.3
+PyYAML==6.0.2
+requests==2.32.3
+streamlit==1.38.0
